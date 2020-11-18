@@ -41,22 +41,22 @@ public void leerOpcion(){
         System.out.println("\nIngrese opcion (1-7): ");
         opcion = teclado.nextInt();
         switch (opcion){
-            case1:
+            case 1:
             ingresarValor();
             break;
-            case2:
+            case 2:
             buscarValor();
             break;
-            case3:
+            case 3:
             modificarValor();
             break;
-            case4:
+            case 4:
             eliminarValor();
             break;
-            case5:
+            case 5:
             insertarValor();
             break;
-            case6:
+            case 6:
             mostrarLista();
             break;
         }
@@ -133,11 +133,13 @@ public void mostrarLista(){
             System.out.println("Elementos de la lista: ");
             for(int i = 0; i < listaNumeros.size(); i++){
                 System.out.println(listaNumeros.get(i)); //Muestra el contenido de la posición del array
+
             }
+
         } else {
             System.out.println("La lista está vacía");
         }
-    }
+}
 
 }
 
