@@ -61,11 +61,36 @@ public void leerOpcion(){
             break;
         }
 
-
-
-
     }while (opcion != 7);
+}
 
+public void ingresarValor(){
+    Scanner teclado = new Scanner(System.in);
+    double valor = 0;
+    System.out.println("Ingrese un valor: ");
+    valor = teclado.nextDouble();
+    listaNumeros.add(valor); //El elemento add permite añadir un elemento al Arraylist
+}
+
+public void buscarValor(){
+    Scanner teclado = new Scanner(System.in);
+    double valor = 0;
+    int indice = 0;
+    System.out.println("Valor a buscar: ");
+    valor = teclado.nextDouble();
+    indice = listaNumeros.indexOf(valor); //El metodo indexOf muestra la posición en que se encuentra el valor en el Arraylist
+    if (indice != -1){
+        System.out.println("Dato se encuentra en posición: " + indice);
+    } else {
+        System.out.println("Dato no se encuentra");
+    }
+}
+
+public void modificarValor(){
+    Scanner teclado = new Scanner(System.in);
+    double valor, nuevoValor;
+    int indice;
+    System.out.println("");
 
 }
 
