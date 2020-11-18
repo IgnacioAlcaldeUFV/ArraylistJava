@@ -54,7 +54,7 @@ public void leerOpcion(){
             eliminarValor();
             break;
             case5:
-            eliminarValor();
+            insertarValor();
             break;
             case6:
             mostrarLista();
@@ -117,7 +117,7 @@ public void eliminarValor(){
     }
 }
 
-    public void insertarValor(){
+public void insertarValor(){
         Scanner teclado = new Scanner(System.in);
         double valor;
         int indice;
@@ -126,6 +126,17 @@ public void eliminarValor(){
         System.out.println("Posicion donde desea insertar");
         indice = teclado.nextInt();
         listaNumeros.add(indice, valor); //Poner en la posicion indice el valor
+    }
+
+public void mostrarLista(){
+        if(!listaNumeros.isEmpty()){
+            System.out.println("Elementos de la lista: ");
+            for(int i = 0; i < listaNumeros.size(); i++){
+                System.out.println(listaNumeros.get(i)); //Muestra el contenido de la posición del array
+            }
+        } else {
+            System.out.println("La lista está vacía");
+        }
     }
 
 }
