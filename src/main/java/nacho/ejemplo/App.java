@@ -90,11 +90,43 @@ public void modificarValor(){
     Scanner teclado = new Scanner(System.in);
     double valor, nuevoValor;
     int indice;
-    System.out.println("");
-
+    System.out.println("Valor a modificar");
+    valor = teclado.nextDouble();
+    indice = listaNumeros.indexOf(valor);
+    if (indice != -1){
+        System.out.println("Nuevo valor: ");
+        nuevoValor = teclado.nextDouble();
+        listaNumeros.set(indice, nuevoValor);
+    } else {
+        System.out.println("Dato no se encuentra");
+    }
 }
 
+public void eliminarValor(){
+    Scanner entrada = new Scanner(System.in);
+    double valor;
+    int indice;
+    System.out.println("Valor a eliminar: ");
+    valor = entrada.nextDouble();
+    indice = listaNumeros.indexOf(valor);
+    if (indice != -1){
+        listaNumeros.remove(indice);
+        System.out.println("Dato eliminado");
+    } else {
+        System.out.println("Dato no se encuentra");
+    }
+}
 
+    public void insertarValor(){
+        Scanner teclado = new Scanner(System.in);
+        double valor;
+        int indice;
+        System.out.println("Valor a insertar");
+        valor = teclado.nextDouble();
+        System.out.println("Posicion donde desea insertar");
+        indice = teclado.nextInt();
+        listaNumeros.add(indice, valor); //Poner en la posicion indice el valor
+    }
 
 }
 
